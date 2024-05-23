@@ -18,7 +18,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.pixi.project]
 channels = ["conda-forge"]
-platforms = ["osx-arm64", "linux-64", 'win-64', 'osx-64']
+platforms = ["osx-64", "linux-64", "osx-arm64", "win-64"]
 
 [tool.pixi.pypi-dependencies]
 wikiapp = { path = ".", editable = true }
@@ -39,26 +39,24 @@ pytest-mock = ">=3.14.0,<3.15"
 test = "pytest"
 
 [tool.pixi.feature.py310.dependencies]
-python = "3.10.*"
 click = ">=8.1.3,<8.2"
+python = "3.10.*"
 requests = ">=2.23.0,<2.33"
 
 [tool.pixi.feature.py311.dependencies]
 requests = ">=2.23.0,<2.33"
-click = ">=8.1.3,<8.2"
 python = "3.11.*"
+click = ">=8.1.3,<8.2"
 
 [tool.pixi.environments]
-default = { solve-group = "default" } # includes ['default']
-test = { features = ["test"], solve-group = "default" } # ['default, 'test']
-py310test = { features = [
-    "test",
-    "py310",
-], solve-group = "py310" } # ['default', 'test', 'py310']
-py311test = { features = [
-    "test",
-    "py311",
-], solve-group = "py311" } # ['default', 'test', 'py311']
+default = { solve-group = "default" }                   # includes ['default] = ['default]
+test = { features = ["test"], solve-group = "default" } # ['default;, 'test']
+py310test={features =[
+"test,py310"
+], solve-group = "py310"}
+py311test= {features = [
+"test", "py311"
+], solve group ="py311"}
 
 [tool.pyright]
 venvPath = "."

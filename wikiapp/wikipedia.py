@@ -1,7 +1,7 @@
 import requests
 import click
 
-API_URL = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
+API_URL = 'https://{language}.wikipedia.org/api/rest_v1/page/random/summary'
 
 def random_page(language="en"):
  """ Get a random page from wikipedia"""
