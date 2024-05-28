@@ -56,12 +56,19 @@ pre-commit = ">=3.7.1,<3.8"
 lint = "ruff check"
 format = "ruff format"
 
+[tool.pixi.feature.typing.dependencies]
+mypy = ">=0.812,<1.11"
+
+[tool.pixi.feature.typing.tasks]
+typing = "mypy."
+
 [tool.pixi.environments]
 default = { solve-group = "default" } # includes ['default']
 test = { features = ["test"], solve-group = "default" } # ['default, 'test']
 dev = { features = [
    "test",
    "lintformat",
+   "typing"
    ], solve-group = "default" }
 py310test = { features = [
     "test",
@@ -91,9 +98,26 @@ select = [
     "I",
     # bandit
     "S",
+    #mypy
+    "ANN",
 ]
 ignore = [
     # bandit
-    "S101",
+    "S101", #dont warn on asserts
+    "E203", #dont complain about whitespace before
+    "ANN401",
 ]
-    mccabe.max-complexity = 10
+
+ mccabe.max-complexity = 10
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+ignore-fully-untyped = true
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+
+[[tool.mypy.overrides]]
+module = ["requests", "pytest"]
+ignore_missing_imports = true
