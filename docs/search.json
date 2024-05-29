@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "wikipedia.html",
+    "href": "wikipedia.html",
+    "title": "Wikipedia Module",
+    "section": "",
+    "text": "from wikiapp.wikipedia import random_page, Page\nfrom nbdev import show_doc",
+    "crumbs": [
+      "Wikipedia Module"
+    ]
+  },
+  {
+    "objectID": "wikipedia.html#example",
+    "href": "wikipedia.html#example",
+    "title": "Wikipedia Module",
+    "section": "Example",
+    "text": "Example\n\npage = random_page()\nprint(\"TITLE\", page.title)\nprint(\"EXTRACT\", page.extract)\n\nTITLE Battle of Petrikowka\nEXTRACT The Battle of Petrikowka took place between 27 and 30 September 1941, during World War II. Fought between Italian and Soviet forces, it was the first significant engagement involving the Italian Expeditionary Corps in Russia.\n\n\nIf you do this again, you will have another random page\n\npage = random_page()\nprint(\"TITLE\", page.title)\nprint(\"EXTRACT\", page.extract)\n\nTITLE Vermont Route 14\nEXTRACT Vermont Route 14 (VT 14) is a 108.946-mile-long (175.332 km) north–south state highway in northeastern Vermont, United States. It extends from U.S. Route 4 (US 4) and US 5 in White River Junction to VT 100 in Newport. Between White River Junction and the city of Barre, the route parallels Interstate 89 (I-89). VT 14 was originally designated in 1922 as part of the New England road marking system. Its north end was truncated in 1926 as a result of the designation of US 2 but was extended north along an old alignment of VT 12 in the 1960s.\n\n\nYou can change the language, if you want:\n\npage = random_page(language=\"fr\") #Change in language\nprint(\"TITLE\", page.title)\nprint(\"EXTRACT\", page.extract)\n\nTITLE Dakota Blue Richards\nEXTRACT Dakota Blue Richards, née le 11 avril 1994 à South Kensington, à Londres au Royaume-Uni, est une actrice britannique.",
+    "crumbs": [
+      "Wikipedia Module"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "wikiapp Docs",
+    "section": "",
+    "text": "Welcome to the documentation for wikiapp! We are so glad you here.\nThis library will let you get random wikipedia page excerpts, in any language.\nYeah we know it does not do much! But it is a start.\n &gt; wikiapp -l es              \nEnfermedad mitocondrial\nAdemás de la información genética contenida en el núcleo celular, las\ncélulas cuentan también con una pequeña proporción de ADN extranuclear\nque se encuentra localizado en las mitocondrias.",
+    "crumbs": [
+      "wikiapp Docs"
+    ]
+  },
+  {
+    "objectID": "console.html",
+    "href": "console.html",
+    "title": "wikiapp",
+    "section": "",
+    "text": "from wikiapp.console import main\nfrom nbdev import show_doc",
+    "crumbs": [
+      "Examples"
+    ]
+  },
+  {
+    "objectID": "console.html#examples",
+    "href": "console.html#examples",
+    "title": "wikiapp",
+    "section": "Examples",
+    "text": "Examples",
+    "crumbs": [
+      "Examples"
+    ]
+  }
+]

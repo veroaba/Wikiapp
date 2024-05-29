@@ -1,0 +1,19 @@
+---
+title: wikiapp Docs
+---
+
+Welcome to the documentation for wikiapp! We are so glad you here.
+
+This library will let you get random wikipedia page excerpts, in any language.
+
+Yeah we know it does not do much! But it is a start.
+
+ 
+```bash
+ > wikiapp -l es              
+Enfermedad mitocondrial
+Además de la información genética contenida en el núcleo celular, las
+células cuentan también con una pequeña proporción de ADN extranuclear
+que se encuentra localizado en las mitocondrias.
+
+```

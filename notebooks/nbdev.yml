@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "wikiapp"
+  site-url: "https://veroaba.github.io/wikiapp"
+  description: "Get random wikipedia pages"
+  repo-branch: main
+  repo-url: "https://github.com/veroaba/wikiapp"

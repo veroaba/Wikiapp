@@ -63,7 +63,6 @@ def test_main_succeeds_in_production(runner: CliRunner) -> None:
 
 
 
-
 def test_random_page_uses_given_language(
     runner: CliRunner, mock_requests_get: Mock
 ) -> None:
