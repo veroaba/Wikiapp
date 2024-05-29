@@ -19,8 +19,8 @@ from wikiapp.wikipedia import random_page
 def main(language: str) -> None:
     """The ultramodern Python project."""
     data = random_page(language=language)
-    title = data["title"]
-    extract = data["extract"]
+    title = page.title
+    extract = page.extract
     click.secho(title, fg="green")
     click.echo(textwrap.fill(extract))
 
