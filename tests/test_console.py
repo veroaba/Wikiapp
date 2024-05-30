@@ -56,11 +56,11 @@ def test_main_prints_message_on_request_error(
     result = runner.invoke(console.main)
     assert "Error" in result.output
 
+
 @pytest.mark.e2e
 def test_main_succeeds_in_production(runner: CliRunner) -> None:
     result = runner.invoke(console.main)
     assert result.exit_code == 0
-
 
 
 def test_random_page_uses_given_language(
@@ -73,6 +73,6 @@ def test_random_page_uses_given_language(
 
 def test_main_succeeds(runner: CliRunner) -> None:
     result = runner.invoke(console.main)
-    print(">>>",result)
+    print(">>>", result)
     assert result.exit_code == 0
     assert result

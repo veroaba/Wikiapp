@@ -1,10 +1,11 @@
+from typing import Any
 from unittest.mock import Mock
 
 import pytest
 from pytest_mock import MockFixture
 
 
-def pytest_configure(config) -> None:
+def pytest_configure(config: Any) -> None:
     config.addinivalue_line("markers", "e2e: mark as end-to test.")
 
 
@@ -15,4 +16,5 @@ def mock_requests_get(mocker: MockFixture) -> Mock:
         "title": "Lorem Ipsum",
         "extract": "Lorem ipsum dolor sit amet",
     }
+
     return mock

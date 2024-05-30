@@ -1,17 +1,19 @@
-from typing import Any
 import click
 import requests
 from pydantic import BaseModel, ValidationError
 
 API_URL = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 
+
 class Page(BaseModel):
     "A Page Dataclass to represent the return value from wikipedia"
+
     title: str  # The title of the wikipedia page
     extract: str  # The extract of the Wikipedia page
 
+
 def random_page(
-    language: str = "en"  # The language you want to use, as a two character string.
+    language: str = "en",  # The language you want to use, as a two character string.
 ) -> Page:  # Returns a Page Object
     """Get a random page from wikipedia"""
     try:

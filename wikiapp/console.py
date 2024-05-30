@@ -17,8 +17,8 @@ from wikiapp.wikipedia import random_page
 )
 @click.version_option(version=__version__)
 def main(
-    language: str  # The language you want to use, as a two character string
-) -> None:  #This is a console function so returns nothing
+    language: str,  # The language you want to use, as a two character string
+) -> None:  # This is a console function so returns nothing
     """
     This is the console interface to 'random_page' function in wikipedia.py.
 
